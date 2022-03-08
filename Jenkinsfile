@@ -7,6 +7,8 @@ pipeline{
         stage('build jar'){
             steps{
                 echo "Building jar file"
+				sh 'gradle -version'
+				echo '\$GRADLE_HOME'
                 sh 'gradle clean build'
             }
         }
