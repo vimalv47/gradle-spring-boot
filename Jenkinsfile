@@ -9,7 +9,7 @@ pipeline{
                 echo "Building jar file"
 				sh 'gradle -version'
 				sh 'echo gradle home : \$GRADLE_HOME'
-                sh 'gradle clean build'
+                sh 'gradle clean build --debug'
             }
         }
         stage('build docker image'){
