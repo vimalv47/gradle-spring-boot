@@ -7,9 +7,9 @@ pipeline{
         stage('build jar'){
             steps{
                 echo "Building jar file"
-				sh 'gradle -version'
+				sh '/opt/gradle/gradle-7.4/bin/gradle -version'
 				sh 'echo gradle home : \$GRADLE_HOME'
-                sh 'gradle clean build --debug'
+                sh '/opt/gradle/gradle-7.4/bin/gradle clean build --debug'
             }
         }
         stage('build docker image'){
